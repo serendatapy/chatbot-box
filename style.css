@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******START CUSTOM CSS************/
+/*for the DIV that contains all messages*/
+html, textarea, button{
+  font-family: 'Montserrat',sans-serif;
+}
+
+body {
+  background: #8bcfda;
+}
+
+h1{
+  color: white;
+  /*font-family: 'Montserrat',sans-serif;*/
+  margin: 90px 0 0 20px;
+  text-align: center;
+  padding: 1em;
+  font-size: 31px;
+}
+
+/*Space that contains chat bubbles*/
+span{
+  font-size: 0.6em;
+  color: #3c454c;
+}
+
+.main{
+  display:flex;
+}
+
+#content{
+  display: grid;
+  grid-auto-rows: min-content;
+  /*align-items: unset;*/
+  /*justify-content: left;*/
+  /*flex-wrap: wrap;*/
+  border: 1px solid #e7e5e5;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  min-width: 250px;
+  max-width: 700px;
+  height: 300px;
+  background:#e4dfda;
+  overflow: auto;
+  border-radius: 15px;
+}
+
+/*CHAT BUBBLE inside the content DIV*/
+#content p {
+  padding: 1em;
+  margin:1em;
+  background: #e8f5f8;
+  border: 1px solid slategrey;
+  border-radius: 5px 30px 30px;
+  width: 60%;
+}
+
+#message{
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  min-width: 250px;
+  max-width: 700px;
+  /*overflow: auto;*/
+  /*padding: 0 0 0 3px;*/
+}
+
+#message button{
+  margin: 0.5em 0 0 0;
+}
+
+button{
+  border:none;
+  padding:6px;
+  /*text-decoration: none;*/
+  border-radius: 10px;
+  background: #ec5f59;
+  /*box-shadow: 0 1px 0 white;*/
+  cursor:pointer;
+  /*font-family: 'Montserrat',sans-serif;*/
+  font-size: 1.25em;
+  color: white;
+  width: 100%;
+  min-width: 250px;
+}
+
+.buttonHover{
+  background: #078aba;
+}
+
+/*stop users from resizing textbox*/
+textarea{
+  resize: none;
+  width: 95%;
+  min-width: 240px;
+  max-width: 700px;
+  border-radius: 10px;
+  padding: 0.25% 2%;
+  font-size: 1.2em;
+}
+
+
+@media (min-width: 768px) {
+    #content{
+      width: 60%;
+    }
+
+  /*CHAT BUBBLE inside the content DIV*/
+    #content p {
+      width: 60%;
+    }
+    
+    #message{
+      width: 60%;
+    }
+    /*textarea{
+      width: 98%;  
+    }*/
+    
+  }
+  
+  
+  /*---------- Desktops ----------*/
+  @media (min-width: 1200px) {
+    #content{
+      /*width: 50%;*/
+      /*max-width: 700px;*/
+    }
+
+  /*CHAT BUBBLE inside the content DIV*/
+    #content p {
+      width: 60%;
+    }
+    
+    #message{
+      /*max-width: 700px;*/
+      /*width: 50%;*/
+    }
+    textarea{
+      /*max-width: 700px;  */
+    }
+  }
