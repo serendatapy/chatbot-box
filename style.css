@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-/******START CUSTOM CSS************/
+/**********************START CUSTOM CSS**********************/
 /*for the DIV that contains all messages*/
 html, textarea, button{
   font-family: 'Montserrat',sans-serif;
@@ -55,15 +55,17 @@ html, textarea, button{
 
 body {
   background: #8bcfda;
+  height: 100%;
+  line-height: 1.25;
 }
 
 h1{
   color: white;
-  /*font-family: 'Montserrat',sans-serif;*/
-  margin: 90px 0 0 20px;
+  margin: 15px 0px 20px 0px;
   text-align: center;
   padding: 1em;
   font-size: 31px;
+  width:100%;
 }
 
 /*Space that contains chat bubbles*/
@@ -72,47 +74,37 @@ span{
   color: #3c454c;
 }
 
-.main{
-  display:flex;
+.container{
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 #content{
   display: grid;
   grid-auto-rows: min-content;
-  /*align-items: unset;*/
-  /*justify-content: left;*/
-  /*flex-wrap: wrap;*/
-  border: 1px solid #e7e5e5;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  min-width: 250px;
-  max-width: 700px;
+  width: 85%;
   height: 300px;
   background:#e4dfda;
-  overflow: auto;
   border-radius: 15px;
+  overflow: auto;
 }
 
 /*CHAT BUBBLE inside the content DIV*/
 #content p {
-  padding: 1em;
-  margin:1em;
+  padding: 0.75em;
+  margin:0.75em;
   background: #e8f5f8;
-  border: 1px solid slategrey;
   border-radius: 5px 30px 30px;
   width: 60%;
 }
 
 #message{
   margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  min-width: 250px;
-  max-width: 700px;
-  /*overflow: auto;*/
-  /*padding: 0 0 0 3px;*/
+  width: 85%;
 }
 
 #message button{
@@ -122,16 +114,12 @@ span{
 button{
   border:none;
   padding:6px;
-  /*text-decoration: none;*/
   border-radius: 10px;
   background: #ec5f59;
-  /*box-shadow: 0 1px 0 white;*/
   cursor:pointer;
-  /*font-family: 'Montserrat',sans-serif;*/
   font-size: 1.25em;
   color: white;
   width: 100%;
-  min-width: 250px;
 }
 
 .buttonHover{
@@ -141,12 +129,10 @@ button{
 /*stop users from resizing textbox*/
 textarea{
   resize: none;
-  width: 95%;
-  min-width: 240px;
-  max-width: 700px;
+  width: 96%;
   border-radius: 10px;
-  padding: 0.25% 2%;
-  font-size: 1.2em;
+  padding: 1% 2%;
+  border: none;
 }
 
 
