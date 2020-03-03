@@ -3,19 +3,21 @@ $(document).ready(function(){
  let messageId = 0; //to allow messages to have unique styling
 
 
-  var sendMessage = function(){
+  const sendMessage = () => { //When message is sent
     
-    var newMessage = $("textarea").val();
-    var chatHistory = $("#chat-bubble").html();
-    var backcolor = "#ffa992";
-    createMessage(newMessage,chatHistory,backcolor);
+    let chatHistory = $("#chat-space").html();
+    let newMessage = $("textarea").val();
+    let bubbleColor = "#ffa992";
     
-    setTimeout(function(){
-                var newBotResponse = generateAnswer();
-                backcolor = "#e8f5f8";
-                chatHistory = $("#chat-bubble").html();
-                createMessage(newBotResponse,chatHistory,backcolor);
+    createMessage(newMessage,chatHistory,bubbleColor);
+    
+    setTimeout(function(){ //bot response
+                let botAnswer = generateAnswer();
+                bubbleColor = "#e8f5f8";
+                chatHistory = $("#chat-space").html();
+                createMessage(botAnswer,chatHistory,bubbleColor);
     },1000);
+
   }
 
 
@@ -34,7 +36,7 @@ $(document).ready(function(){
      }
      
 
-    var textarea = $("#chat-bubble");
+    var textarea = $("#chat-space");
     
     var side = backgroundColor == "#e8f5f8" ? "left" : "right";
     var borderSide = side == "left" ? "5px 30px 30px" : "30px 5px 30px 30px"
