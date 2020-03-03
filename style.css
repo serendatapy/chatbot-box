@@ -47,8 +47,8 @@ table {
 	border-spacing: 0;
 }
 
-/**********************START CUSTOM CSS**********************/
-/*for the DIV that contains all messages*/
+/*-------------------------START CUSTOM CSS--------------------------*/
+
 html, textarea, button{
   font-family: 'Montserrat',sans-serif;
 }
@@ -57,21 +57,6 @@ body {
   background: #8bcfda;
   height: 100%;
   line-height: 1.25;
-}
-
-h1{
-  color: white;
-  margin: 15px 0px 20px 0px;
-  text-align: center;
-  padding: 1em;
-  font-size: 31px;
-  width:100%;
-}
-
-/*Space that contains chat bubbles*/
-span{
-  font-size: 0.6em;
-  color: #3c454c;
 }
 
 .container{
@@ -83,7 +68,17 @@ span{
 	margin: 0 auto;
 }
 
-#content{
+h1{
+  color: white;
+  margin: 15px 0px 20px 0px;
+  text-align: center;
+  padding: 1em;
+  font-size: 2em;
+  width:100%;
+}
+
+/*-------------Chat Bubbles--------------------*/
+#chat-bubble{
   display: grid;
   grid-auto-rows: min-content;
   width: 85%;
@@ -93,40 +88,25 @@ span{
   overflow: auto;
 }
 
-/*CHAT BUBBLE inside the content DIV*/
-#content p {
+#chat-bubble p {
   padding: 0.75em;
   margin:0.75em;
   background: #e8f5f8;
   border-radius: 5px 30px 30px;
-  width: 60%;
+  width: 75%;
+}
+/*Styling for TIMESTAMP*/
+span{ 
+  font-size: 0.6em;
+  color: #3c454c;
 }
 
-#message{
+/*----------------Area for Message Input----------------*/
+#message-input{
   margin-top: 10px;
   width: 85%;
 }
 
-#message button{
-  margin: 0.5em 0 0 0;
-}
-
-button{
-  border:none;
-  padding:6px;
-  border-radius: 10px;
-  background: #ec5f59;
-  cursor:pointer;
-  font-size: 1.25em;
-  color: white;
-  width: 100%;
-}
-
-.buttonHover{
-  background: #078aba;
-}
-
-/*stop users from resizing textbox*/
 textarea{
   resize: none;
   width: 96%;
@@ -135,44 +115,40 @@ textarea{
   border: none;
 }
 
+button{
+  border:none;
+  padding:10px;
+  border-radius: 10px;
+  background: #ec5f59;
+  cursor:pointer;
+  font-size: 1.25em;
+  color: white;
+  width: 100%;
+  margin: 0.5em 0 0 0;
+}
 
-@media (min-width: 768px) {
-    #content{
-      width: 60%;
-    }
+.buttonHover{
+  background: #078aba;
+}
 
-  /*CHAT BUBBLE inside the content DIV*/
-    #content p {
+/*----------------Customization for different Devices--------------------*/
+
+/*---------- Tablets + ----------*/
+@media (min-width: 768px){
+    #chat-bubble{
       width: 60%;
     }
-    
-    #message{
+    #chat-bubble p{
       width: 60%;
     }
-    /*textarea{
-      width: 98%;  
-    }*/
-    
+    #message-input{
+      width: 60%;
+    }
   }
   
-  
   /*---------- Desktops ----------*/
-  @media (min-width: 1200px) {
-    #content{
-      /*width: 50%;*/
-      /*max-width: 700px;*/
-    }
-
-  /*CHAT BUBBLE inside the content DIV*/
-    #content p {
-      width: 60%;
-    }
-    
-    #message{
-      /*max-width: 700px;*/
-      /*width: 50%;*/
-    }
-    textarea{
-      /*max-width: 700px;  */
+  @media (min-width: 1200px){
+   #chat-bubble p {
+      width: 50%;
     }
   }
