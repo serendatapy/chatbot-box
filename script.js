@@ -6,10 +6,8 @@ $(document).ready(function(){
  const listOfBotAnswers = ["No", "Yes", "I don't think so…", "Of course!", "Indubitably", "In your dreams", "As I see it, yes", "Better not tell you now"];
 
   const sendMessage = () => { //When message is sent
-      //let textar =  $("#textarea").val().trim().length; 
-      //alert(textar);
-      
-      //if(textar > 0){  
+            
+      if($("textarea").val().trim().length > 0){  
         let newMessage = $("textarea").val();
         let chatHistory = $("#chat-space").html();
         let bubbleColor = humanColor; //human color
@@ -22,7 +20,7 @@ $(document).ready(function(){
                 chatHistory = $("#chat-space").html();
                 createMessage(botAnswer,chatHistory,bubbleColor);
         },1000);
-      //}
+      }
    }//end send message
 
   const getTime = () => {
