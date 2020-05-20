@@ -47,146 +47,108 @@ table {
 	border-spacing: 0;
 }
 
-/******START CUSTOM CSS************/
-/*for the DIV that contains all messages*/
+/*-------------------------START CUSTOM CSS--------------------------*/
+
 html, textarea, button{
   font-family: 'Montserrat',sans-serif;
 }
 
 body {
   background: #8bcfda;
+  height: 100%;
+  line-height: 1.25;
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 h1{
   color: white;
-  /*font-family: 'Montserrat',sans-serif;*/
-  margin: 90px 0 0 20px;
+  margin: 15px 0px 20px 0px;
   text-align: center;
   padding: 1em;
-  font-size: 31px;
+  font-size: 2em;
+  width:100%;
 }
 
-/*Space that contains chat bubbles*/
-span{
+/*-------------Chat Bubbles--------------------*/
+#chat-space{
+  display: grid;
+  grid-auto-rows: min-content;
+  width: 85%;
+  height: 300px;
+  background:#e4dfda;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+#chat-space p {
+  padding: 0.75em;
+  margin:0.75em;
+  background: #e8f5f8;
+  border-radius: 5px 30px 30px;
+  width: 75%;
+}
+/*Styling for TIMESTAMP*/
+span{ 
   font-size: 0.6em;
   color: #3c454c;
 }
 
-.main{
-  display:flex;
-}
-
-#content{
-  display: grid;
-  grid-auto-rows: min-content;
-  /*align-items: unset;*/
-  /*justify-content: left;*/
-  /*flex-wrap: wrap;*/
-  border: 1px solid #e7e5e5;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  min-width: 250px;
-  max-width: 700px;
-  height: 300px;
-  background:#e4dfda;
-  overflow: auto;
-  border-radius: 15px;
-}
-
-/*CHAT BUBBLE inside the content DIV*/
-#content p {
-  padding: 1em;
-  margin:1em;
-  background: #e8f5f8;
-  border: 1px solid slategrey;
-  border-radius: 5px 30px 30px;
-  width: 60%;
-}
-
-#message{
+/*----------------Area for Message Input----------------*/
+#message-input{
   margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
-  min-width: 250px;
-  max-width: 700px;
-  /*overflow: auto;*/
-  /*padding: 0 0 0 3px;*/
+  width: 85%;
 }
 
-#message button{
-  margin: 0.5em 0 0 0;
+textarea{
+  resize: none;
+  width: 96%;
+  border-radius: 10px;
+  padding: 1% 2%;
+  border: none;
 }
 
 button{
   border:none;
-  padding:6px;
-  /*text-decoration: none;*/
+  padding:10px;
   border-radius: 10px;
   background: #ec5f59;
-  /*box-shadow: 0 1px 0 white;*/
   cursor:pointer;
-  /*font-family: 'Montserrat',sans-serif;*/
   font-size: 1.25em;
   color: white;
   width: 100%;
-  min-width: 250px;
+  margin: 0.5em 0 0 0;
 }
 
 .buttonHover{
   background: #078aba;
 }
 
-/*stop users from resizing textbox*/
-textarea{
-  resize: none;
-  width: 95%;
-  min-width: 240px;
-  max-width: 700px;
-  border-radius: 10px;
-  padding: 0.25% 2%;
-  font-size: 1.2em;
-}
+/*----------------Customization for different Devices--------------------*/
 
-
-@media (min-width: 768px) {
-    #content{
+/*---------- Tablets + ----------*/
+@media (min-width: 768px){
+    #chat-space{
       width: 60%;
     }
-
-  /*CHAT BUBBLE inside the content DIV*/
-    #content p {
+    #chat-space p{
       width: 60%;
     }
-    
-    #message{
+    #message-input{
       width: 60%;
     }
-    /*textarea{
-      width: 98%;  
-    }*/
-    
   }
   
-  
   /*---------- Desktops ----------*/
-  @media (min-width: 1200px) {
-    #content{
-      /*width: 50%;*/
-      /*max-width: 700px;*/
-    }
-
-  /*CHAT BUBBLE inside the content DIV*/
-    #content p {
-      width: 60%;
-    }
-    
-    #message{
-      /*max-width: 700px;*/
-      /*width: 50%;*/
-    }
-    textarea{
-      /*max-width: 700px;  */
+  @media (min-width: 1200px){
+   #chat-space p {
+      width: 50%;
     }
   }
