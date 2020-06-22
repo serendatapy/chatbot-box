@@ -70,9 +70,9 @@ body {
 
 h1{
   color: white;
-  margin: 15px 0px 20px 0px;
+  /*margin: 15px 0px 20px 0px;*/
   text-align: center;
-  padding: 1em;
+  padding: 1em 1em 0.5em 1em;
   font-size: 2em;
   width:100%;
 }
@@ -82,7 +82,7 @@ h1{
   display: grid;
   grid-auto-rows: min-content;
   width: 85%;
-  height: 300px;
+  height: 55vh;
   background:#e4dfda;
   border-radius: 15px;
   overflow: auto;
@@ -135,6 +135,11 @@ button{
 
 /*---------- Tablets + ----------*/
 @media (min-width: 768px){
+
+    h1 {
+      padding: 2em;
+      font-size: 3vh;
+    }
     #chat-space{
       width: 60%;
     }
@@ -148,6 +153,10 @@ button{
 
   /*---------- Desktops ----------*/
   @media (min-width: 1200px){
+    h1 {
+      padding: 1.5em;
+      font-size: 3.5vw;
+    }
    #chat-space p {
       width: 50%;
     }
