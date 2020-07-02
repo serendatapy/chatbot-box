@@ -70,11 +70,15 @@ body {
 
 h1{
   color: white;
-  /*margin: 15px 0px 20px 0px;*/
   text-align: center;
   padding: 1em 1em 0.5em 1em;
   font-size: 2em;
   width:100%;
+}
+
+.heading-primary {
+  backface-visibility: hidden; /*this fixes shaking in animation*/
+  animation: fadeIn 1s ease-out,moveInLeft 1s ease-out;
 }
 
 /*-------------Chat Bubbles--------------------*/
@@ -132,6 +136,28 @@ button{
 }
 
 /*----------------Customization for different Devices--------------------*/
+
+@keyframes moveInLeft{
+  0% {
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(5px);
+
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 /*---------- Tablets + ----------*/
 @media (min-width: 768px){
