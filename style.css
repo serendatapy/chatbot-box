@@ -49,6 +49,10 @@ table {
 
 /*-------------------------START CUSTOM CSS--------------------------*/
 
+*,*:focus,*:hover{ /*disable chrome's on focus black border*/
+  outline:none;
+}
+
 html, textarea, button{
   font-family: 'Montserrat',sans-serif;
 }
@@ -80,6 +84,7 @@ h1{
   backface-visibility: hidden; /*this fixes shaking in animation*/
   animation: fadeIn 1s ease-out,moveInLeft 1s ease-out;
 }
+
 
 /*-------------Chat Bubbles--------------------*/
 #chat-space{
@@ -131,11 +136,24 @@ button{
   margin: 0.5em 0 0 0;
 }
 
-.buttonHover{
+/*javascript on hover*/
+/*.buttonHover{
   background: #078aba;
-}
+}*/
 
 /*----------------Customization for different Devices--------------------*/
+@media (hover: hover){
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn:active{
+    background: #078aba;
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
 
 @keyframes moveInLeft{
   0% {
